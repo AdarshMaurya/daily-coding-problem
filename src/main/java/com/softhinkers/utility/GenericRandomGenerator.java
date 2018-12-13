@@ -14,7 +14,7 @@ public class GenericRandomGenerator {
         for (int index = 0; index < listSize; index++) {
             intList.add(random.nextInt((rangeMax + 1) - rangeMin) + rangeMin);
         }
-        System.out.println("\nListSize: " + intList.size());
+        System.out.println("\nSize: " + intList.size());
         System.out.println(intList + "\n");
         System.out.println("---------------------------------");
         return intList;
@@ -31,7 +31,7 @@ public class GenericRandomGenerator {
         }
         List<Integer> intList = new ArrayList<Integer>(intSet);
 
-        System.out.println("\nListSize: " + intSet.size());
+        System.out.println("\nSize: " + intSet.size());
         System.out.println(intList + "\n");
         System.out.println("---------------------------------");
 
@@ -48,7 +48,7 @@ public class GenericRandomGenerator {
                 intList.add(val);
             }
         }
-        System.out.println("\nListSize: " + intList.size());
+        System.out.println("\nSize: " + intList.size());
         System.out.println(intList + "\n");
         System.out.println("---------------------------------");
         return intList;
@@ -63,7 +63,7 @@ public class GenericRandomGenerator {
         for (int index = 0; index < maxElement; index++) {
             intList.add(random.nextInt((rangeMax + 1) - rangeMin) + rangeMin);
         }
-        System.out.println("\nListSize: " + intList.size());
+        System.out.println("\nSize: " + intList.size());
         System.out.println(intList + "\n");
         System.out.println("---------------------------------");
         return intList;
@@ -75,5 +75,9 @@ public class GenericRandomGenerator {
         int randomNumber = random.nextInt((rangeMax + 1) - rangeMin) + rangeMin;
         System.out.println("\nRandom Number: " + randomNumber);
         return randomNumber;
+    }
+
+    public static int[] generateRandomIntArray(int maxElement, int rangeMin, int rangeMax) {
+        return generateListOfInteger(maxElement, rangeMin, rangeMax).stream().mapToInt(i -> i).toArray();
     }
 }
