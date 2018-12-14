@@ -21,7 +21,7 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 
 Follow-up: what if you can't use division?
 
-# Problem 3
+## Problem 3
 Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s), which deserializes the string back into the tree.
 
 For example, given the following Node class
