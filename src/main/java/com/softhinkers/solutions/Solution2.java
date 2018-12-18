@@ -78,4 +78,19 @@ public class Solution2 implements Problem2 {
 
         return products;
     }
+
+    public int[] generateProductFromSubSetOfArrayIgnoringIthIndexElement4(int[] inputIntArray) {//O(n)
+        int[] productArray = new int[inputIntArray.length];
+        int product = 1;
+
+        for (int index = 0; index < inputIntArray.length; index++) {//O(n)
+            product *= inputIntArray[index];//O(1)
+        }
+        for (int index = 0; index < inputIntArray.length; index++) {//O(n)
+            productArray[index] = product / inputIntArray[index];
+        }
+        return productArray;
+    }
+
+
 }

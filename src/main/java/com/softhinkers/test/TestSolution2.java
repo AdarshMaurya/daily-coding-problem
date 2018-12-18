@@ -11,10 +11,11 @@ public class TestSolution2 {
     public static void main(String[] args) {
         //int[] test = {1, 2, 3, 4, 5};
         //int[] test = {3, 2, 1};
-        int[] test = generateRandomIntArray(10, 1,10);
+        int[] test = generateRandomIntArray(10, 1, 10);
         testSolution1(test);
         testSolution2(test);
         testSolution3(test);
+        testSolution4(test);
 
     }
 
@@ -28,7 +29,7 @@ public class TestSolution2 {
         System.out.println("\nTime taken: " + timeElapsed.toNanos() / 1000 + " micro second");
 
         for (Integer value : result)
-            System.out.print(value+",");
+            System.out.print(value + ",");
     }
 
     public static void testSolution2(int[] test) {
@@ -41,7 +42,7 @@ public class TestSolution2 {
         System.out.println("\n\nTime taken: " + timeElapsed2.toNanos() / 1000 + " micro second");
 
         for (Integer value : result)
-            System.out.print(value+",");
+            System.out.print(value + ",");
     }
 
     public static void testSolution3(int[] test) {
@@ -54,6 +55,19 @@ public class TestSolution2 {
         System.out.println("\n\nTime taken: " + timeElapsed3.toNanos() / 1000 + " micro second");
 
         for (Integer value : result)
-            System.out.print(value+",");
+            System.out.print(value + ",");
+    }
+
+    public static void testSolution4(int[] test) {
+        Instant start4 = Instant.now();
+        Solution2 sol4 = new Solution2();
+        int[] result = sol4.generateProductFromSubSetOfArrayIgnoringIthIndexElement4(test);
+        Instant end4 = Instant.now();
+
+        Duration timeElapsed3 = Duration.between(start4, end4);
+        System.out.println("\n\nTime taken: " + timeElapsed3.toNanos() / 1000 + " micro second");
+
+        for (Integer value : result)
+            System.out.print(value + ",");
     }
 }
